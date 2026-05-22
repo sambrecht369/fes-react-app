@@ -52,11 +52,11 @@ const [user, setUser] = React.useState(null);
 
     function createPost() {
       const post = {
-        title: "Land a $400k job",
+        title: "Land a $200k job",
         description: "Finish Frontend Simplified",
       };
       addDoc(collection(db, "posts"), post);
-  
+      console.log("Post created");
     }
 
 
@@ -85,7 +85,7 @@ const [user, setUser] = React.useState(null);
                 </button>
             )}
             <button className='logout btn' onClick={logout} >Logout</button>
-            <button onClick={createPost()}>Create Post</button>
+            <button onClick={createPost}>Create Post</button>
         </div>
       </div>
     </nav>
