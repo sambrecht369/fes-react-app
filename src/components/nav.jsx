@@ -50,12 +50,12 @@ const [user, setUser] = React.useState(null);
     setUser({});
   }
 
-    function createPost() {
+    async function createPost() {
       const post = {
-        title: "Land a $200k job",
+        title: "Land a $400k job",
         description: "Finish Frontend Simplified",
       };
-      addDoc(collection(db, "posts"), post);
+      await addDoc(collection(db, "posts"), post);
       console.log("Post created");
     }
 
